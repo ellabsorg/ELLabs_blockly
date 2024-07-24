@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import BlocklyComponent, { Block, Value, Field, Shadow } from "react-blockly";
+import { BlocklyWorkspace } from "react-blockly";
+
+const TestBlockly = () => {
+  const [json, setJson] = React.useState("");
+
+  const initialXml =
+    '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="text" x="70" y="30"><field name="TEXT"></field></block></xml>';
+
+  const toolboxConfiguration = {
+    kind: "categoryToolbox",
+    contents: [
+      {
+        kind: "block",
+        type: "controls_if",
+      },
+      {
+        kind: "block",
+        type: "controls_whileUntil",
+      },
+      {
+        kind: "block",
+        type: "logic_compare",
+      },
+      {
+        kind: "block",
+        type: "math_number",
+      },
+    ],
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: "500px", backgroundColor: "rgba(21,22,69, 0.2)" }}>
+      <BlocklyWorkspace
+        toolboxConfiguration={toolboxConfiguration}
+        initialXml={initialXml}
+        className="fill-height"
+        onJsonChange={(json) => {
+          setJson(json);
+          console.log(json);
+        }}
+      />
+      <textarea
+        id="code"
+        style={{ height: "200px", width: "400px" }}
+        readOnly
+      ></textarea>
     </div>
   );
-}
+};
 
-export default App;
+export default TestBlockly;
