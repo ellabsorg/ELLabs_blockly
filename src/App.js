@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import { BlocklyWorkspace } from "react-blockly";
-import * as Blocklyjs  from 'blockly/javascript';
+import * as Blocklyjs from 'blockly/javascript';
 
 const TestBlockly = () => {
 
@@ -15,27 +15,32 @@ const TestBlockly = () => {
     "contents": [
       {
         "kind": "category",
-        "name": "Control",
-        "colour": "#5CA65C",
+        "name": "Logic",
+        "colour": "#5C81A6",
         "contents": [
           {
             "kind": "block",
             "type": "controls_if"
           },
-        ]
-      },
-      {
-        "kind": "category",
-        "name": "Logic",
-        "colour": "#5C81A6",
-        "contents": [
           {
             "kind": "block",
             "type": "logic_compare"
           },
           {
             "kind": "block",
+            "type": "logic_negate"
+          },
+          {
+            "kind": "block",
             "type": "logic_operation"
+          },
+          {
+            "kind": "block",
+            "type": "logic_null"
+          },
+          {
+            "kind": "block",
+            "type": "logic_ternary"
           },
           {
             "kind": "block",
@@ -50,8 +55,274 @@ const TestBlockly = () => {
         "contents": [
           {
             'kind': 'block',
+            'type': 'controls_repeat_ext',
+            'inputs': {
+              'TIMES': {
+                'shadow': {
+                  'type': 'math_number',
+                  "fields": {
+                    "NUM": 10
+                  }
+                }
+              }
+
+            }
+          },
+          {
+            'kind': 'block',
             'type': 'controls_whileUntil'
+          },
+          {
+            'kind': 'block',
+            'type': 'controls_for',
+            "inputs": {
+              "FROM": {
+                "shadow": {
+                  "type": "math_number",
+                  "fields": {
+                    "NUM": 1
+                  }
+                }
+
+              },
+              "TO": {
+                "shadow": {
+                  "type": "math_number",
+                  "fields": {
+                    "NUM": 1
+                  }
+                }
+
+              },
+              "BY": {
+                "shadow": {
+                  "type": "math_number",
+                  "fields": {
+                    "NUM": 1
+                  }
+                }
+
+              }
+            }
+          },
+          {
+            'kind': 'block',
+            'type': 'controls_forEach'
+          },
+          {
+            'kind': 'block',
+            'type': 'controls_flow_statements',
+            "fields": {
+              "FLOW": "BREAK"
+            }
+          },
+        ]
+      },
+      {
+        "kind": "category",
+        "name": "Math",
+        "colour": "#5CA65C",
+        "contents": [
+          {
+            "kind": "block",
+            "type": "math_number",
+            "fields": {
+              "NUM": 123
+            }
+          },
+          {
+            "kind": "block",
+            "type": "math_arithmetic",
+            "inputs": {
+              "A": {
+                "shadow": {
+                  "type": "math_number",
+                  "fields": {
+                    "NUM": 1
+                  }
+                }
+              },
+              "B": {
+                "shadow": {
+                  "type": "math_number",
+                  "fields": {
+                    "NUM": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "block",
+            "type": "math_single",
+            "inputs": {
+              "NUM": {
+                "shadow": {
+                  "type": "math_number",
+                  "fields": {
+                    "NUM": 9
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "block",
+            "type": "math_trig",
+            "inputs": {
+          "NUM": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 45
+              }
+            }
           }
+        }
+          },
+          {
+            "kind": "block",
+            "type": "math_constant",
+          },
+          {
+            "kind": "block",
+            "type": "math_number_property",
+            "extraState": "<mutation divisor_input=\"false\"></mutation>",
+            "inputs": {
+          "NUMBER_TO_CHECK": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 0
+              }
+            }
+          }
+        }
+
+          },
+          {
+            "kind": "block",
+            "type": "math_round",
+            "inputs": {
+          "NUM": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 3.1
+              }
+            }
+          }
+        }
+
+          },
+          {
+            "kind": "block",
+            "type": "math_on_list",
+            "extraState": "<mutation op=\"SUM\"></mutation>",
+            "fields": {
+          "OP": "SUM"
+        }
+          },
+          {
+            "kind": "block",
+            "type": "math_modulo",
+            "inputs": {
+          "DIVIDEND": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 64
+              }
+            }
+          },
+          "DIVISOR": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 10
+              }
+            }
+          }
+        }
+          },
+          {
+            "kind": "block",
+            "type": "math_constrain",
+            "inputs": {
+          "VALUE": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 50
+              }
+            }
+          },
+          "LOW": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 1
+              }
+            }
+          },
+          "HIGH": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 100
+              }
+            }
+          }
+        }
+          },
+          {
+            "kind": "block",
+            "type": "math_random_int",
+            "inputs": {
+          "FROM": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 1
+              }
+            }
+          },
+          "TO": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 100
+              }
+            }
+          }
+        }
+          },
+          {
+            "kind": "block",
+            "type": "math_random_float",
+          },
+          {
+            "kind": "block",
+            "type": "math_atan2",
+            "inputs": {
+          "X": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 1
+              }
+            }
+          },
+          "Y": {
+            "shadow": {
+              "type": "math_number",
+              "fields": {
+                "NUM": 1
+              }
+            }
+          }
+        }
+          },
         ]
       },
       {
@@ -67,8 +338,27 @@ const TestBlockly = () => {
             'kind': 'block',
             'type': 'text_print'
           },
-          
+
         ]
+      },
+
+      {
+        "kind": "category",
+        "name": "Variables",
+        "colour": "#a55b80",
+        "custom": "VARIABLE"
+      },
+      // {
+      //   "kind": "category",
+      //   "name": "Variables",
+      //   "colour": "#a55b80",
+      //   "custom": "VARIABLE_DYNAMIC"
+      // },
+      {
+        "kind": "category",
+        "name": "Functions",
+        "colour": "#995ba5",
+        "custom": "PROCEDURE"
       }
 
     ]
@@ -86,7 +376,7 @@ const TestBlockly = () => {
     const code = document.getElementById("code").value
     window.LoopTrap = 1000;
     Blocklyjs.JavascriptGenerator.INFINITE_LOOP_TRAP =
-        'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+      'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
     Blocklyjs.JavascriptGenerator.INFINITE_LOOP_TRAP = null;
     try {
       eval(code);
@@ -100,7 +390,7 @@ const TestBlockly = () => {
       <BlocklyWorkspace
         toolboxConfiguration={toolboxConfiguration}
         initialXml={initialXml}
-        className="fill-height" 
+        className="fill-height"
         onWorkspaceChange={workspaceDidChange}
       />
       <textarea
