@@ -1,5 +1,6 @@
 {
   "name": "ellabs_blockly",
+  "homepage": "https://ellabsorg.github.io/ELLabs_blockly/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
