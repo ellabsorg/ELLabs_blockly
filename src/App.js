@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
+import "./custom_Blocks.js";
 import toolboxConfiguration from "./toolboxConfiguration.json"
+
 
 import { BlocklyWorkspace } from "react-blockly";
 import * as Blocklyjs from 'blockly/javascript';

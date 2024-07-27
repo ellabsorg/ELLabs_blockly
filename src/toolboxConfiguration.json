@@ -1,6 +1,19 @@
 {
+    
     "kind": "categoryToolbox",
     "contents": [
+      {
+        "kind": "category",
+        "name": "Custom",
+        "colour": "#5CA699",
+        "contents": [
+          {
+            "kind": "block",
+            "type": "indexOf"
+          }
+        ]
+        
+        },
       {
         "kind": "category",
         "name": "Logic",
