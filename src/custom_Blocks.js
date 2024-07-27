@@ -4,13 +4,13 @@ import * as Blocklyjs  from 'blockly/javascript';
 
 Blockly.Blocks['indexOf'] = {
     init: function() {
-      this.appendValueInput('FIND')
-          .setCheck('String')
-          .appendField('string');
+      
       this.appendValueInput('VALUE')
           .setCheck('String')
-          .appendField('substring')
-          .appendField(new Blockly.FieldDropdown([["indexOf","FIRST"], ["lastIndexOf","END"]]), "MODE");
+          .appendField(new Blockly.FieldDropdown([["index of","FIRST"], ["last index of","END"]]), "MODE");
+      this.appendValueInput('FIND')
+          .setCheck('String')
+          .appendField('inside string');
       this.setOutput(true, 'String');
       this.setColour(160);
       this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
