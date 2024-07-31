@@ -1,6 +1,8 @@
 import * as Blockly  from 'blockly';
 import * as Blocklyjs  from 'blockly/javascript';
-
+// import 'scratch-blocks/blockly_compressed_horizontal'
+// import 'scratch-blocks/blockly_uncompressed_vertical'
+import 'scratch-blocks'
 
 Blockly.Blocks['indexOf'] = {
     init: function() {
@@ -16,6 +18,8 @@ Blockly.Blocks['indexOf'] = {
       this.setHelpUrl('http://www.w3schools.com/jsref/jsref_length_string.asp');
     }
   };
+
+  // Blockly.Blocks['control_forever'] = Blockly.Blocks. control ['control_forever'];
   Blocklyjs.javascriptGenerator.forBlock['indexOf'] = function(block) {
     // Search the text for a substring.
     var operator = block.getFieldValue('MODE') === 'FIRST' ? 'indexOf' : 'lastIndexOf';
