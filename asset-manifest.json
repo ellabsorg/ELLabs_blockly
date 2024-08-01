@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ELLabs_blockly/static/css/main.4880d016.css",
-    "main.js": "/ELLabs_blockly/static/js/main.123b772f.js",
+    "main.js": "/ELLabs_blockly/static/js/main.a8260c63.js",
     "static/js/453.29acc368.chunk.js": "/ELLabs_blockly/static/js/453.29acc368.chunk.js",
     "index.html": "/ELLabs_blockly/index.html",
     "main.4880d016.css.map": "/ELLabs_blockly/static/css/main.4880d016.css.map",
-    "main.123b772f.js.map": "/ELLabs_blockly/static/js/main.123b772f.js.map",
+    "main.a8260c63.js.map": "/ELLabs_blockly/static/js/main.a8260c63.js.map",
     "453.29acc368.chunk.js.map": "/ELLabs_blockly/static/js/453.29acc368.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4880d016.css",
-    "static/js/main.123b772f.js"
+    "static/js/main.a8260c63.js"
   ]
 }
