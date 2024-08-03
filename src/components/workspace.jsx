@@ -1,6 +1,8 @@
 import {  useState, useEffect } from "react"
 import "./custom_Blocks.js";
 import "./custom_Blocks.js";
+import "./toolbox_style.css"
+import "./custom_category.js"
 import toolboxConfiguration from "./toolboxConfiguration.json"
 
 import * as Blocklyjs from 'blockly/javascript';
