@@ -15,16 +15,6 @@
         ]
         
         },
-        {
-          "kind": "category",
-          "name": "Looks",
-          "colour": "#5CA699",
-          "contents": [
-
-  
-          ]
-          
-          },
       {
         "kind": "category",
         "name": "Logic",
