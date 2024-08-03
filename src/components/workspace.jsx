@@ -20,7 +20,7 @@ const [Start, setStart] = useState(false);
     if(!Start){
       setStart(true)
       console.log('start')
-    const workspace = Blockly.inject(document.getElementById('blocklyDiv'), {toolbox: toolboxConfiguration});
+    const workspace = Blockly.inject(document.getElementById('blocklyDiv'), {renderer: 'Zelos',toolbox: toolboxConfiguration});
     const state =  Blockly.serialization.workspaces.save(workspace);
     Blockly.serialization.workspaces.load(state, workspace);
     setWorkspace(workspace)
